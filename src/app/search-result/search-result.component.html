@@ -1,0 +1,10 @@
+<p style="color: red;">{{loading ? 'loading..':'' }}</p>
+<div class="result">
+    <div class="row">
+    <ng-container *ngFor="let datad of data$ | async">
+            <div class="column">
+                <img height="auto" width="100%" [src]="datad.images.fixed_height.url">
+            </div>
+    </ng-container>
+    </div>
+</div>

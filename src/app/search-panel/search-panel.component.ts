@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-search-panel',
@@ -7,9 +8,13 @@ import { Component } from '@angular/core';
 })
 export class SearchPanelComponent {
   searchTerm = ''
-  constructor() { }
-  public search(){
-    // todo 
+  constructor(private service: DataService) { }
+
+  public search(): void {
+    if (this.searchTerm.length) {
+      this.service.setSearchText(this.searchTerm)
+    }
   }
+
 }
 
