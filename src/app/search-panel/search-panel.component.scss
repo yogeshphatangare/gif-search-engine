@@ -1,0 +1,113 @@
+:host {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FA6B01;
+        text-align: center;
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 50%;
+        }
+
+        button {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn {
+            background-color: #E3EEF5;
+            color: #B4C2CB;
+
+            .fa-caret-down {
+                padding: 0 5px;
+            }
+
+        }
+
+        .btn {
+            background-color: black;
+            border-radius: 0px 4px 4px 0px;
+            -moz-border-radius: 0px 4px 4px 0px;
+            -webkit-border-radius: 0px 4px 4px 0px;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #e2eaf0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            height: 50px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 100%;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    }
+
+    input {
+        cursor: pointer;
+        height: 50px;
+        width: 40%;
+        border: none;
+        -webkit-appearance: none;
+        border-radius: 4p x 0px 0px 4px;
+        -moz-border-radius: 4px 0px 0px 4px;
+        -webkit-border-radius: 4px 0px 0px 4px;
+        padding: 0px 20px;
+        font-size: 16px;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: gray;
+    }
+
+    :focus::placeholder {
+        color: #d5d7dd;
+    }
+
+    // /* responsive css below */
+    // @media only screen and (max-width: 680px) {
+
+    //     @media only screen and (max-width: 515px) {
+    //         .main-input {
+    //             width: 210px;
+    //         }
+    //     }
+
+    // }
+}
