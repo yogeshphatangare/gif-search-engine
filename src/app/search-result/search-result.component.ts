@@ -13,15 +13,21 @@ export class SearchResultComponent implements OnInit {
 
   data$: Observable<GiphyData[]>;
   loading: boolean;
+  data: GiphyData[];
   constructor(private service: DataService) {
-    this.data$ = this.service.getSearchText().pipe(
-      tap(() => this.loading = true),
-      switchMap(term => this.service.searchGif(term)),
-      tap(() => this.loading = false),
-    );
-  } 
+    this.service.tredingData().subscribe(res => {
+      this.data = res;
+    })
+  }
 
   ngOnInit() {
+    this.service.getSearchText().pipe(
+      tap(() => this.loading = true),
+      switchMap(term => this.service.searchGif(term))
+    ).subscribe(res => {
+      this.data = res;
+      this.loading = false;
+    })
   }
 
 }

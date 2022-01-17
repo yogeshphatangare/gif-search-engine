@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 export class DataService {
   static readonly giphyUrl = 'https://api.giphy.com/v1/gifs/search';
   static readonly giphyApiKey = 'aFFKTuSMjd6j0wwjpFCPXZipQbcnw3vB'; 
+  static trendingApiUrl= 'https://api.giphy.com/v1/gifs/trending'
 
   private searchText = new Subject<string>();
 
@@ -30,5 +31,14 @@ export class DataService {
       limit:'15'
     };
    return this.http.get<GiphyResult>(DataService.giphyUrl, { params }).pipe(map(t=>t.data))
+  }
+
+  public tredingData():Observable<GiphyData[]>{
+    const params = {
+      api_key: DataService.giphyApiKey,
+      type: 'gifs',
+      limit:'15'
+    };
+   return this.http.get<GiphyResult>(DataService.trendingApiUrl, { params }).pipe(map(t=>t.data))
   }
 }

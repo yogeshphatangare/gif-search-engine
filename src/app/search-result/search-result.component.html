@@ -2,18 +2,17 @@
     <!-- loader can be improved -->
     <div *ngIf="loading" class="text-black loader">{{loading ? 'loading...':'' }}</div>
     <div class="row">
-        <ng-container *ngIf="data$ | async as result;">
-            <ng-container *ngFor="let ele of result">
-                <div class="d-flex">
-                    <img [title]="ele.title" [alt]="ele.title" height="auto" width="100%" [src]="ele.images.fixed_width.url">
-                </div>
-            </ng-container>
-            <div *ngIf="!result.length">
-               <label>
-                No GIFs found<br>
-                Try searching for another keyword
-               </label> 
+        <ng-container *ngFor="let ele of data">
+            <div class="d-flex">
+                <img [title]="ele.title" [alt]="ele.title" height="auto" width="100%"
+                    [src]="ele.images.fixed_width.url">
             </div>
         </ng-container>
+        <div *ngIf="!data?.length">
+            <label>
+                No GIFs found<br>
+                Try searching for another keyword
+            </label>
+        </div>
     </div>
 </div>
