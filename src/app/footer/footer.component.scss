@@ -15,19 +15,23 @@
     color: #fff;
     background-color: #363B3E;
     flex-wrap: wrap; // wrap category links
+    justify-content: center;
 
     .links {
         flex: 1;
+        min-width: 40%;
 
         a {
             text-decoration: none;
-            flex: 1 22%;
+            width: 22%;
             color: #707477;
             font-size: 1rem;
             font-weight: normal;
             padding: 0 10px;
             margin-bottom: 10px;
+            min-width: 75px;
         }
+       
 
         .category {
             display: flex;
@@ -70,7 +74,7 @@
 }
 
 .container>div {
-    margin: 20px 80px;
+    margin: 20px;
 }
 
 

@@ -1,19 +1,27 @@
-.result{
-    padding: 50px 2rem;
-    background-color: #F7F7F7;
-    .row {
-      display: grid;
-      grid-template-columns: auto auto auto ;
-      grid-gap: 10px;
-      img{
-        max-height: 200px;
-        object-fit: contain;
+.result {
+  padding: 50px 2rem;
+  background-color: #F7F7F7;
+  .loader{
+    text-align: center;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+
+    img {
+      max-height: 200px;
+      object-fit: contain;
     }
-    }
-    label{
-      color: black;
-    }
+  }
+
+  label {
+    color: black;
+  }
+
+  .d-flex {
+    display: flex;
+    background-color: #edf2f7;
+  }
 }
-
-  
-

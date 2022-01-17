@@ -1,10 +1,11 @@
 <div class="result">
-    <div style="text-align: center; color: #000;">{{loading ? 'loading...':'' }}</div>
+    <!-- loader can be improved -->
+    <div class="text-black loader">{{loading ? 'loading...':'' }}</div>
     <div class="row">
         <ng-container *ngIf="data$ | async as result;">
             <ng-container *ngFor="let ele of result">
-                <div style="display: flex;">
-                    <img [title]="ele.title" height="auto" width="100%" [src]="ele.images.fixed_width.url">
+                <div class="d-flex">
+                    <img [title]="ele.title" [alt]="ele.title" height="auto" width="100%" [src]="ele.images.fixed_width.url">
                 </div>
             </ng-container>
             <div *ngIf="!result.length">
