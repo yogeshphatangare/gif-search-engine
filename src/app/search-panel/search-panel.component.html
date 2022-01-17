@@ -3,12 +3,12 @@
     <div class="row">
         <input (keyup.enter)="search()" [(ngModel)]="searchTerm" type="text" class="main-name" placeholder="What are you looking for?" />
         <div class="dropdown">
-            <button (click)="clicked =true" class="dropbtn">Show All <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <button (click)="clicked =true"  class="dropbtn">{{selected}}  <i class="fa fa-caret-down" aria-hidden="true"></i>
             </button>
             <div id="myDropdown" class="dropdown-content" [ngClass]="{'show':clicked }">
-                <a (click)="clicked =false" href="#">Value 1</a>
-                <a (click)="clicked =false" href="#">Value 2</a>
-                <a (click)="clicked =false" href="#">Value 3</a>
+                <a (click)="update('Value 1')" href="#">Value 1</a>
+                <a (click)="update('Value 2')" href="#">Value 2</a>
+                <a (click)="update('Show All')" href="#">Show All</a>
             </div>
         </div>
         <button class="btn" (click)="search()" >

@@ -8,12 +8,18 @@ import { DataService } from '../data.service';
 })
 export class SearchPanelComponent {
   searchTerm = ''
+  clicked = false;
+  selected: string = 'Show All';
   constructor(private service: DataService) { }
 
   public search(): void {
     if (this.searchTerm.length) {
       this.service.setSearchText(this.searchTerm)
     }
+  }
+  update(value: string) {
+    this.clicked = false;
+    this.selected = value;
   }
 
 }

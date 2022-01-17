@@ -1,6 +1,6 @@
 <div class="result">
     <!-- loader can be improved -->
-    <div class="text-black loader">{{loading ? 'loading...':'' }}</div>
+    <div *ngIf="loading" class="text-black loader">{{loading ? 'loading...':'' }}</div>
     <div class="row">
         <ng-container *ngIf="data$ | async as result;">
             <ng-container *ngFor="let ele of result">
