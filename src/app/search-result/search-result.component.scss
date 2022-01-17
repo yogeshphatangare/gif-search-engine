@@ -1,25 +1,19 @@
 .result{
-    padding: 0 50px;
-    margin: 10px 0;
+    padding: 50px 2rem;
+    background-color: #F7F7F7;
+    .row {
+      display: grid;
+      grid-template-columns: auto auto auto ;
+      grid-gap: 10px;
+      img{
+        max-height: 200px;
+        object-fit: contain;
+    }
+    }
+    label{
+      color: black;
+    }
 }
-.row {
-    display: -ms-flexbox; /* IE 10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE 10 */
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
+
   
-  /* Create two equal columns that sits next to each other */
-  .column {
-    -ms-flex: 32%; /* IE 10 */
-    flex: 32%;
-    padding: 0 4px;
-  }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    max-height: 400px;
-    max-width: 300px;
-  }
+

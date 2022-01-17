@@ -27,7 +27,7 @@ export class DataService {
     const params = {
       api_key: DataService.giphyApiKey,
       q: searchTerm,
-      limit:'10'
+      limit:'15'
     };
    return this.http.get<GiphyResult>(DataService.giphyUrl, { params }).pipe(map(t=>t.data))
   }

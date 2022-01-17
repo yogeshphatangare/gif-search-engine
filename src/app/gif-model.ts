@@ -4,6 +4,7 @@ export interface GiphyResult {
   }
   
  export interface GiphyData {
+   title:string,
   images: {
       fixed_width: {
         url: string;

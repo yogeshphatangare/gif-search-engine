@@ -1,10 +1,18 @@
-<p style="color: red;">{{loading ? 'loading..':'' }}</p>
 <div class="result">
+    <div style="text-align: center; color: #000;">{{loading ? 'loading...':'' }}</div>
     <div class="row">
-    <ng-container *ngFor="let datad of data$ | async">
-            <div class="column">
-                <img height="auto" width="100%" [src]="datad.images.fixed_height.url">
+        <ng-container *ngIf="data$ | async as result;">
+            <ng-container *ngFor="let ele of result">
+                <div style="display: flex;">
+                    <img [title]="ele.title" height="auto" width="100%" [src]="ele.images.fixed_width.url">
+                </div>
+            </ng-container>
+            <div *ngIf="!result.length">
+               <label>
+                No GIFs found<br>
+                Try searching for another keyword
+               </label> 
             </div>
-    </ng-container>
+        </ng-container>
     </div>
 </div>

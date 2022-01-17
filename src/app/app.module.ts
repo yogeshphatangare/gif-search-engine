@@ -6,12 +6,14 @@ import { SearchPanelComponent } from './search-panel/search-panel.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchPanelComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
