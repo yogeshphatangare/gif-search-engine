@@ -3,12 +3,10 @@
     <div *ngIf="loading" class="text-black loader">{{loading ? 'loading...':'' }}</div>
     <div class="row">
         <ng-container *ngFor="let ele of data">
-            <div class="d-flex">
                 <img [title]="ele.title" [alt]="ele.title" height="auto" width="100%"
                     [src]="ele.images.fixed_width.url">
-            </div>
         </ng-container>
-        <div *ngIf="!data?.length">
+        <div *ngIf="!data.length && !loading">
             <label>
                 No GIFs found<br>
                 Try searching for another keyword

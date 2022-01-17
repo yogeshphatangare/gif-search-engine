@@ -12,11 +12,12 @@ import { GiphyData } from '../gif-model';
 export class SearchResultComponent implements OnInit {
 
   data$: Observable<GiphyData[]>;
-  loading: boolean;
-  data: GiphyData[];
+  loading: boolean = true;
+  data: GiphyData[]=[];
   constructor(private service: DataService) {
     this.service.tredingData().subscribe(res => {
       this.data = res;
+      this.loading = false;
     })
   }
 
