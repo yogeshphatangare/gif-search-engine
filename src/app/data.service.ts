@@ -28,7 +28,7 @@ export class DataService {
     const params = {
       api_key: DataService.giphyApiKey,
       q: searchTerm,
-      limit:'15'
+      limit:'13'
     };
    return this.http.get<GiphyResult>(DataService.giphyUrl, { params }).pipe(map(t=>t.data))
   }
@@ -37,7 +37,7 @@ export class DataService {
     const params = {
       api_key: DataService.giphyApiKey,
       type: 'gifs',
-      limit:'15'
+      limit:'13'
     };
    return this.http.get<GiphyResult>(DataService.trendingApiUrl, { params }).pipe(map(t=>t.data))
   }
